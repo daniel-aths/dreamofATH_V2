@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dream of ATH Portfolio - Community Manager focused on sustainability, green energy, and inclusive Web3 communities.">
+  <meta name="keywords" content="Sustainability, Community Manager, Green Energy, Web3, Portfolio">
+  <title>Dream of ATH | Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-content img {
+      height: 40px;
+      border-radius: 50px;
+    }
+    .site-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #2c3e50;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hamburger {
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: white;
+      font-size: 2rem;
+    }
+    .menu-expanded nav {
+      display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+      margin-top: 70px;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: #27ae60;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #1e8449;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      position: relative;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    #successMessage {
+      color: green;
+      margin-top: 1rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+    .dreams-logo-name {
+      width: 200px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .social-icon-img {
+      height: 24px;
+      width: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="Images/Dream of ATH Logo.jpg" alt="Dream of ATH Logo">
+      <h1 class="site-title">Dream of ATH</h1>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <div class="social-icons">
+        <a href="https://x.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Twitter_Logo.svg" alt="X Logo" class="social-icon-img">
+        </a>
+        <a href="https://telegram.org" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="social-icon-img">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to Dream of All Time High!</h1>
+      <img class="dreams-logo-name" src="Images/Dreams logo name.jpg" alt="Dream of ATH Logo">
+      <p>Explore the endless possibilities with a hard-working and dedicated team, ready to take your project to the next level.</p>
+      <button onclick="scrollToSection('projects')">View Projects</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Dream of ATH, founded by Daniel in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="projectList" class="project-container">
+      <div class="project-card">
+        <h3>Sustainability Community Initiative</h3>
+        <p>Developed a platform to connect professionals in green energy and share best practices for sustainable construction.</p>
+      </div>
+      <div class="project-card">
+        <h3>Web3 Inclusive Community Events</h3>
+        <p>Organized events that educated diverse groups on the potential of decentralized technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mjkgrjgw" method="POST">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Your Name" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Your Email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      <div class="form-buttons">
+        <button type="submit">Submit Form</button>
+        <a href="https://calendly.com/danielsweb3" target="_blank"><button type="button">Book a Meeting</button></a>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dream of ATH. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('header').classList.toggle('menu-expanded');
+    }
+
+    function closeMenu() {
+      document.querySelector('header').classList.remove('menu-expanded');
+    }
+
+    window.addEventListener('scroll', closeMenu);
+  </script>
+</body>
+</html>

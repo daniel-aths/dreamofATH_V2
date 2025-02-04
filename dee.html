@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniel Uyere Portfolio - Community Manager with expertise in Web3, decentralized platforms, and emerging technologies.">
+  <meta name="keywords" content="Web3, Community Manager, Decentralized, Crypto, Portfolio">
+  <title>Dream of ATH | Outperforming the rest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Add favicon -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: #ff5f6d;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ff2f4c;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    #projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    #successMessage {
+      color: green;
+      margin-top: 1rem;
+      display: none;
+    }
+    .testimonial-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .testimonial-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .blog-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    .hidden-form {
+      display: none;
+      margin-top: 2rem;
+    }
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dream of ATH</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to Dream of All Time High!</h1>
+      <p>Explore the endless possibilities with a hard working and dedicated team, ready to take your project to the next level.</p>
+      <button onclick="scrollToSection('projects')">View projects</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Dream of ATH, founded by Daniel in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="projectList" class="project-container">
+      <div class="project-card">
+        <h3>Community Growth Strategy</h3>
+        <p>Developed and implemented a strategy that boosted user engagement by 35%.</p>
+      </div>
+      <div class="project-card">
+        <h3>DeSci Web3 Events</h3>
+        <p>Organized large-scale events focused on decentralized science projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-container" id="testimonialContainer">
+      <div class="testimonial-card">
+        <p>"Daniel's ability to build and manage communities is exceptional. He transformed our engagement metrics." - Client A</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Highly recommend Daniel for his dedication and innovative ideas in the Web3 space." - Client B</p>
+      </div>
+    </div>
+    <button id="reviewButton" onclick="toggleTestimonialForm()">Write a Review</button>
+    <form id="testimonialForm" class="hidden-form">
+      <h3>Submit a Testimonial</h3>
+      <label for="testimonialName">Name:</label>
+      <input type="text" id="testimonialName" name="name" required aria-label="Your Name">
+      
+      <label for="testimonialText">Testimonial:</label>
+      <textarea id="testimonialText" name="testimonial" rows="4" required aria-label="Your Testimonial"></textarea>
+      
+      <button type="button" onclick="addTestimonial()">Submit Testimonial</button>
+    </form>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-container">
+      <div class="blog-card">
+        <h3>Building Web3 Communities</h3>
+        <p>Tips and strategies for creating successful and engaged Web3 communities.</p>
+        <a href="https://example.com/blog/web3-communities" target="_blank">Read more</a>
+      </div>
+      <div class="blog-card">
+        <h3>The Future of Decentralized Science</h3>
+        <p>An exploration of how DeSci is shaping the research landscape.</p>
+        <a href="https://example.com/blog/desci-future" target="_blank">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" action="https://formspree.io/f/mjkgrjgw" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-label="Your Name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required aria-label="Your Email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required aria-label="Your Message"></textarea>
+
+      <div class="form-buttons">
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.open('https://calendly.com/danielsweb3', '_blank')">Book a Meeting</button>
+      </div>
+    </form>
+    <p id="successMessage">Thank you for reaching out! I'll get back to you soon.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Daniel Uyere. All rights reserved.</p>
+    <div>
+      <a href="https://twitter.com/danieluyere" target="_blank" aria-label="Twitter">Twitter</a> |
+      <a href="https://linkedin.com/in/danieluyere" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+      <a href="https://github.com/danieluyere" target="_blank" aria-label="GitHub">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll to section
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Toggle testimonial form visibility
+    function toggleTestimonialForm() {
+      const form = document.getElementById('testimonialForm');
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Add testimonial dynamically
+    function addTestimonial() {
+      const name = document.getElementById('testimonialName').value;
+      const text = document.getElementById('testimonialText').value;
+
+      if (name && text) {
+        const testimonialContainer = document.getElementById('testimonialContainer');
+        const newTestimonial = document.createElement('div');
+        newTestimonial.className = 'testimonial-card';
+        newTestimonial.innerHTML = `<p>"${text}" - ${name}</p>`;
+        testimonialContainer.appendChild(newTestimonial);
+
+        // Clear the form
+        document.getElementById('testimonialForm').reset();
+        toggleTestimonialForm();
+      } else {
+        alert('Please fill out all fields.');
+      }
+    }
+
+    // Show success message on form submission
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'block';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
