@@ -4,11 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;  /* Change to Arial, sans-serif if preferred */
   color: #333;
   background-color: #f9f9f9;
   overflow-x: hidden;
+  line-height: 1.6;
 }
+
 header {
   background-color: #2c3e50;
   color: white;
@@ -29,7 +31,7 @@ header {
 }
 .header-content img {
   height: 40px;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 .site-title {
   font-size: 1.5rem;
@@ -61,9 +63,13 @@ nav a {
 }
 .menu-expanded nav {
   display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Hero Section */
+
 .hero {
   height: 100vh;
   display: flex;
@@ -74,7 +80,15 @@ nav a {
   text-align: center;
   animation: fadeIn 2s ease-in;
   margin-top: 70px;
+
+  /* Override global section constraints */
+  padding: 0;
+  max-width: none;
+  width: 100%;
+  margin-left: 0;  /* ensure no auto centering from the global rule */
+  margin-right: 0;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -84,7 +98,7 @@ nav a {
   }
 }
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   animation: slideIn 1.5s ease-in-out;
 }
 @keyframes slideIn {
@@ -98,12 +112,12 @@ nav a {
   }
 }
 button {
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
   background: #27ae60;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -116,27 +130,45 @@ section {
   margin: auto;
 }
 #projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 .project-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
   background: white;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.5);
   transition: transform 0.3s;
 }
 .project-card:hover {
   transform: translateY(-10px);
 }
+.project-card img {
+  width: 100%;
+  max-width: min-content;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.project-card div {
+  width: 100%;
+}
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 1rem 0;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  margin-left: -50vw;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -169,14 +201,27 @@ label {
     position: static;
   }
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   section {
     padding: 2rem 1rem;
   }
+  button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .project-card img {
+    max-width: min-content;
+  }
 }
 .dreams-logo-name {
-  width: 200px;
+  max-width: 100%;
+  height: auto;
+  width: 250px;
 }
 
 .social-icons {
@@ -196,3 +241,206 @@ label {
 .bottom-socials{
   justify-content: center;
 }
+
+/* Flexbox for Why Choose Us */
+.why-choose-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch;
+}
+.why-choose-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.why-choose-item:hover {
+  transform: translateY(-8px);
+  background-color: #f0f8ff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.why-choose-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.project-foto {
+  width: 50px;
+}
+.see-archives-btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.see-archives-btn:hover {
+  background-color: #555;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Why Choose Us Section
+============================ */
+.why-choose-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+.why-choose-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.why-choose-item:hover {
+  transform: translateY(-8px);
+  background-color: #f0f8ff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.why-choose-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+/* Center the benefits intro text on all screen sizes */
+.benefits-intro {
+  text-align: center;
+}
+
+/* ===========================
+   Why Choose Us Section
+============================ */
+.why-choose-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+.why-choose-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+.why-choose-item:hover {
+  transform: translateY(-8px);
+  background-color: #f0f8ff;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.why-choose-item img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Benefits Section
+============================ */
+#benefits {
+background-color: #f0f8ff;
+width: 100%;
+}
+
+.benefit-grid {
+  margin-top: 1rem;
+}
+/* Responsive grid for both rows */
+.top-row,
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+/* Benefit item styling with a more irregular shape */
+.benefit-item {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  width: 100%;
+  max-width: 250px;
+  /* Adjusted border-radius for a more irregular shape */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.benefit-item:hover {
+  transform: scale(1.05);
+}
+.benefit-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%
+}
+/* More subtle pastel background colors for each benefit */
+.benefit-1 { background-color: #e0f0fa; }
+.benefit-2 { background-color: rgba(255, 255, 255, 0.432); }
+.benefit-3 { background-color: #e0f0fa; }
+.benefit-4 { background-color:  rgba(255, 255, 255, 0.432) }
+.benefit-5 { background-color:rgba(255, 255, 255, 0.432); }
+
+
+

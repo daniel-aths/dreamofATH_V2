@@ -7,267 +7,7 @@
   <meta name="keywords" content="Sustainability, Community Manager, Green Energy, Web3, Portfolio">
   <title>Dream of ATH | Professional Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      background-color: #f9f9f9;
-      overflow-x: hidden;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .header-content img {
-      height: 40px;
-      border-radius: 50%;
-    }
-    .site-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-    }
-    nav {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #2c3e50;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .hamburger {
-      cursor: pointer;
-      border: none;
-      background: none;
-      color: white;
-      font-size: 2rem;
-    }
-    .menu-expanded nav {
-      display: flex;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to right, #43cea2, #185a9d);
-      color: white;
-      text-align: center;
-      animation: fadeIn 2s ease-in;
-      margin-top: 70px;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      animation: slideIn 1.5s ease-in-out;
-    }
-    @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    button {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      background: #27ae60;
-      color: white;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #1e8449;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    #projects {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .project-card {
-      display: flex;
-      align-items: stretch;
-      gap: 1.5rem;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #ddd;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.5);
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-10px);
-    }
-    .project-card img {
-      width: 100%;
-      max-width: min-content;
-      height: auto;
-      max-height: 150px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .project-card div {
-      width: 100%;
-    }
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin: auto;
-    }
-    .form-buttons {
-      display: flex;
-      justify-content: space-between;
-    }
-    input, textarea {
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      width: 100%;
-      font-size: 1rem;
-    }
-    label {
-      font-weight: bold;
-    }
-    #successMessage {
-      color: green;
-      margin-top: 1rem;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      nav {
-        position: static;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      section {
-        padding: 2rem 1rem;
-      }
-      button {
-        padding: 0.8rem 1.2rem;
-        font-size: 1rem;
-      }
-      .project-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .project-card img {
-        max-width: min-content;
-      }
-    }
-    .dreams-logo-name {
-      max-width: 100%;
-      height: auto;
-      width: 250px;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .social-icons a {
-      color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
-    .social-icon-img {
-      height: 24px;
-      width: 24px;
-    }
-    .bottom-socials{
-      justify-content: center;
-    }
-
-    /* Flexbox for Why Choose Us */
-    .why-choose-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: stretch;
-    }
-    .why-choose-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      flex: 1;
-      min-width: 300px;
-      border: 1px solid #ddd;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 12px;
-      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-    }
-    .why-choose-item:hover {
-      transform: translateY(-8px);
-      background-color: #f0f8ff;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    }
-    .why-choose-item img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-    }
-    .project-foto {
-      width: 50px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -359,31 +99,117 @@
         </div>
       </div>
     </div>
+    <a href="archives.html" class="see-archives-btn">See Project Archives</a>
+
   </section>
 
-  <section>
-    <div>
-      <h2>What you can benefit?</h2>
-      <p>Choosing Dream of ATH is your gateway to reaching ATH with your project.</p>
-      <div>
-        <h3>Round The Clock Support:</h3>
-        <p>24/7 community management and customer service.</p>
+  <section id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="why-choose-container">
+      <div class="why-choose-item">
+        <img src="Images/support.jpg" alt="Support Image">
+        <div>
+          <h3>24/7 Moderation and Support</h3>
+          <p>
+            We have over 10 active moderators covering all time zones, ensuring your community is always active, engaged, and protected.
+          </p>
+        </div>
       </div>
-      <div>
-        <h3>Security:</h3>
-        <p>Keeping scammers and bad actors at bay to protect your community.</p>
+      <div class="why-choose-item">
+        <img src="Images/Community.jpg" alt="Community Image">
+        <div>
+          <h3>Community is Key</h3>
+          <p>
+            A positive community is the backbone of any successful project. Trust us to drive tremendous growth.
+          </p>
+        </div>
       </div>
-      <div>
-        <h3>Stress-Free Solutions:</h3>
-        <p>We handle the community and new investors, giving developers the freedom to innovate.</p>
+      <div class="why-choose-item">
+        <img src="Images/Community-Management-Tools.png" alt="Management Tools">
+        <div>
+          <h3>Trusted Community Management</h3>
+          <p>
+            We are dedicated to helping projects, large or small, thrive in the competitive crypto space.
+          </p>
+        </div>
       </div>
-      <div>
-        <h3>Community Engagement:</h3>
-        <p>Maintaining a positive community and handling spaces that grow your user base.</p>
+    </div>
+  </section>
+  
+  <section id="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="why-choose-container">
+      <div class="why-choose-item">
+        <img src="Images/support.jpg" alt="Support Image">
+        <div>
+          <h3>24/7 Moderation and Support</h3>
+          <p>
+            We have over 10 active moderators covering all time zones, ensuring your community is always active, engaged, and protected.
+          </p>
+        </div>
       </div>
-      <div>
-        <h3>Hype Generation:</h3>
-        <p>Building excitement and buzz around your project to drive adoption.</p>
+      <div class="why-choose-item">
+        <img src="Images/Community.jpg" alt="Community Image">
+        <div>
+          <h3>Community is Key</h3>
+          <p>
+            A positive community is the backbone of any successful project. Trust us to drive tremendous growth.
+          </p>
+        </div>
+      </div>
+      <div class="why-choose-item">
+        <img src="Images/Community-Management-Tools.png" alt="Management Tools">
+        <div>
+          <h3>Trusted Community Management</h3>
+          <p>
+            We are dedicated to helping projects, large or small, thrive in the competitive crypto space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <h2>What You Can Benefit</h2>
+    <p class="benefits-intro">
+      Choosing Dream of ATH is your gateway to reaching ATH with your project.
+    </p>
+    <div class="benefit-grid">
+      <!-- Top Row: 3 Items -->
+      <div class="top-row">
+        <div class="benefit-item benefit-1">
+          <img src="Images/24-hours-7 benefit.avif" alt="24/7 Support">
+          <h3>Round The Clock Support</h3>
+          <p>24/7 community management and customer service.</p>
+        </div>
+        <div class="benefit-item benefit-2">
+          <img src="Images/security benefit.png" alt="Security">
+          <h3>Security</h3>
+          <p>Protecting your community from scammers and bad actors.</p>
+        </div>
+        <div class="benefit-item benefit-3">
+          <img src="Images/stressfree benefit.png" alt="Stress-Free Solutions">
+          <h3>Stress-Free Solutions</h3>
+          <p>
+            We handle community and investor interactions so developers can focus on innovation.
+          </p>
+        </div>
+      </div>
+      <!-- Bottom Row: 2 Items -->
+      <div class="bottom-row">
+        <div class="benefit-item benefit-4">
+          <img src="Images/engagement benefit.png" alt="Community Engagement">
+          <h3>Community Engagement</h3>
+          <p>Growing and maintaining a positive community.</p>
+        </div>
+        <div class="benefit-item benefit-5">
+          <img src="Images/hype benefit.jpg" alt="Hype Generation">
+          <h3>Hype Generation</h3>
+          <p>
+            Building excitement and buzz around your project to drive adoption.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -392,7 +218,7 @@
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/mjkgrjgw" method="POST">
       <label for="name">Project Name</label>
-      <input id="name" type="text" name="name" placeholder="Project Name" required>
+      <input id="name" type="text" name="name" placeholder="Your Project Name" required>
       <label for="email">Email</label>
       <input id="email" type="email" name="email" placeholder="Your Email" required>
       <label for="message">Message</label>
