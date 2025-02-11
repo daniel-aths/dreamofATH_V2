@@ -5,11 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Archives</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Link to external CSS file -->
-  <link rel="stylesheet" href="archives.css">
+  <style>
+    /* Global Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Archive Container for Larger Screens (Grid Layout) */
+    .archive-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    /* Project Card Styles (Default Grid Layout) */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.5);
+      transition: transform 0.3s;
+      max-width: 300px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .project-card .details p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Return-to-Home Button */
+    .return-home-btn {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.5rem 1rem;
+      background-color: #27ae60;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .return-home-btn:hover {
+      background-color: #1e8449;
+    }
+
+    /* --- Stacked Layout for Small Screens (max-width: 600px) --- */
+    @media (max-width: 600px) {
+      /* Change container layout to block so items can overlap */
+      .archive-container {
+        display: block;
+        position: relative;
+      }
+      
+      .project-card {
+        position: relative;
+        max-width: 90%;
+        margin: 1rem auto;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      /* Overlap cards to simulate a stack */
+      .project-card:not(:first-child) {
+        margin-top: -50px; /* Adjust this value to control overlap */
+      }
+      
+      /* When a card is expanded, remove the negative margin to reveal full details */
+      .project-card.expanded {
+        margin-top: 1rem !important;
+        z-index: 10;
+      }
+      
+      /* Hide details when not expanded */
+      .project-card .details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      
+      /* When expanded, show details */
+      .project-card.expanded .details {
+        max-height: 500px; /* Sufficiently high to show full details */
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Return to Home Button -->
+  <!-- Return-to-Home Button -->
   <a href="index.html" class="return-home-btn">Return to Home</a>
   
   <h1>Project Archives</h1>
@@ -17,73 +133,110 @@
     <div class="project-card">
       <img src="Images/Stox.jpg" alt="Stox App Screenshot">
       <h3>Stox App</h3>
-      <p>A portfolio tracker with excellent crypto and NFT support that adapts the intelligence of the crowd with an incentivizing reward system.</p>
+      <div class="details">
+        <p>A portfolio tracker with excellent crypto and NFT support that adapts the intelligence of the crowd with an incentivizing reward system.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Jenoside Joel.jpg" alt="Jenoside Joel Project">
       <h3>Jenoside Joel</h3>
-      <p>A project committed to donating a substantial portion of its revenue to genocide victims worldwide, including those in the Gaza Strip.</p>
+      <div class="details">
+        <p>A project committed to donating a substantial portion of its revenue to genocide victims worldwide, including those in the Gaza Strip.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Artik.jpg" alt="Artik Finance Platform">
       <h3>Artik Finance</h3>
-      <p>Artik is a platform where investors can suggest, discover, and vote for high-potential projects, empowering loyal holders with regular token airdrops.</p>
+      <div class="details">
+        <p>Artik is a platform where investors can suggest, discover, and vote for high-potential projects, empowering loyal holders with regular token airdrops.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Blackfin.jpg" alt="BlackFin Interface">
       <h3>BlackFin</h3>
-      <p>Navigate blockchain data with an interface that speaks your language. Execute on-chain trades and analyze token assets with our custom AI LLM model, Sierra.</p>
+      <div class="details">
+        <p>Navigate blockchain data with an interface that speaks your language. Execute on-chain trades and analyze token assets with our custom AI LLM model, Sierra.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Invoke Network.jpg" alt="Invoke Network Advertising">
       <h3>Invoke Network</h3>
-      <p>The ethical advertising network for the metaverse and beyond.</p>
+      <div class="details">
+        <p>The ethical advertising network for the metaverse and beyond.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Token FLow.jpg" alt="Token Flow Escrow Platform">
       <h3>Token Flow</h3>
-      <p>A decentralized, blockchain-based escrow platform enabling secure, fast, and trustless P2P transactions on Solana.</p>
+      <div class="details">
+        <p>A decentralized, blockchain-based escrow platform enabling secure, fast, and trustless P2P transactions on Solana.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Amazon Swap.jpg" alt="Amazon Swap DEX">
       <h3>Amazon Swap</h3>
-      <p>AmazonSwap is a decentralized exchange, initially based on the Binance Smart Chain network.</p>
+      <div class="details">
+        <p>AmazonSwap is a decentralized exchange, initially based on the Binance Smart Chain network.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Toct.jpg" alt="Trade our Crypto">
       <h3>Trade our Crypto</h3>
-      <p>Trade our crypto offers funded trading accounts—think Ftmo for crypto.</p>
+      <div class="details">
+        <p>Trade our crypto offers funded trading accounts—think Ftmo for crypto.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Klee.jpeg" alt="Klee Games Interface">
       <h3>Klee Games</h3>
-      <p>An upcoming all-in-one gaming studio that embraces low-cost play-to-earn mechanisms to reward players.</p>
+      <div class="details">
+        <p>An upcoming all-in-one gaming studio that embraces low-cost play-to-earn mechanisms to reward players.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Orijin.jpg" alt="Orijin Finance Platform">
       <h3>Orijin Finance</h3>
-      <p>Orijin Finance enables users to invest in top project token sales across multiple blockchains such as Matic, Binance Smart Chain, and Ethereum.</p>
+      <div class="details">
+        <p>Orijin Finance enables users to invest in top project token sales across multiple blockchains such as Matic, Binance Smart Chain, and Ethereum.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Cososwap.jpg" alt="CosoSwap DEX Interface">
       <h3>CosoSwap</h3>
-      <p>COSOSWAP is a one-stop decentralized exchange integrating smart aggregated transactions, multi-chain support, and more.</p>
+      <div class="details">
+        <p>COSOSWAP is a one-stop decentralized exchange integrating smart aggregated transactions, multi-chain support, and more.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/your_ai.png" alt="Your AI Project">
       <h3>Your AI</h3>
-      <p>The new way of e-commerce—revolutionizing content streaming with a Spotify-inspired model.</p>
+      <div class="details">
+        <p>The new way of e-commerce—revolutionizing content streaming with a Spotify-inspired model.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Pepissimo.jpg" alt="Pepissimo Memecoin">
       <h3>Pepissimo</h3>
-      <p>Where the richness of lasagna layers meets internet humor, creating a memecoin as irresistible as Nonna's homemade ravioli.</p>
+      <div class="details">
+        <p>Where the richness of lasagna layers meets internet humor, creating a memecoin as irresistible as Nonna's homemade ravioli.</p>
+      </div>
     </div>
     <div class="project-card">
       <img src="Images/Narfex.png" alt="Narfex Protocol Interface">
       <h3>Narfex Protocol</h3>
-      <p>Narfex Protocol enables secure and efficient P2P trades of digital assets without centralized intermediaries.</p>
+      <div class="details">
+        <p>Narfex Protocol enables secure and efficient P2P trades of digital assets without centralized intermediaries.</p>
+      </div>
     </div>
   </div>
+
+  <script>
+    // Add click event listeners to each project card on small screens to toggle the expanded state.
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', function() {
+        this.classList.toggle('expanded');
+      });
+    });
+  </script>
 </body>
 </html>
