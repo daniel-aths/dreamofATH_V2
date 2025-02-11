@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* Archive Container for Larger Screens (Grid Layout) */
+/* Archive Container */
 .archive-container {
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@ h1 {
   gap: 2rem;
 }
 
-/* Project Card Styles (Default Grid Layout) */
+/* Project Card Styles */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@ h1 {
   border-radius: 12px;
 }
 
-.project-card .details p {
+.project-card p {
   font-size: 1rem;
   color: #666;
 }
@@ -73,44 +73,4 @@ h1 {
 
 .return-home-btn:hover {
   background-color: #1e8449;
-}
-
-/* --- Stacked Layout for Small Screens (max-width: 600px) --- */
-@media (max-width: 600px) {
-  /* Change container layout to block so items can overlap */
-  .archive-container {
-    display: block;
-    position: relative;
-  }
-  
-  .project-card {
-    position: relative;
-    max-width: 90%;
-    margin: 1rem auto;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  /* Overlap cards to simulate a stack */
-  .project-card:not(:first-child) {
-    margin-top: -50px; /* Adjust this value to control overlap amount */
-  }
-  
-  /* When a card is expanded, remove the negative margin to reveal full details */
-  .project-card.expanded {
-    margin-top: 1rem !important;
-    z-index: 10;
-  }
-  
-  /* Hide details (set max-height: 0) when not expanded */
-  .project-card .details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  /* When expanded, allow the details to grow */
-  .project-card.expanded .details {
-    max-height: 500px; /* Set a sufficiently high value to show full details */
-  }
 }
