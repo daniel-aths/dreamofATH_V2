@@ -136,7 +136,7 @@ section {
 }
 .project-card {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 1.5rem;
   background: white;
   padding: 1.5rem;
@@ -150,9 +150,9 @@ section {
 }
 .project-card img {
   width: 100%;
-  max-width: min-content;
+  max-width: 200px;
   height: auto;
-  max-height: 150px;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -443,7 +443,7 @@ width: 100%;
 .benefit-5 { background-color:rgba(255, 255, 255, 0.432); }
 
 .hero div {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 
