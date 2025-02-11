@@ -36,13 +36,13 @@
       <h1>Welcome to Dream of All Time High!</h1>
       <img class="dreams-logo-name" src="Images/Dreams logo name.jpg" alt="Dream of ATH Logo">
       <p>Explore the endless possibilities with a hard-working and dedicated team, ready to take your project to the next level.</p>
-      <button onclick="scrollToSection('projects')">View Projects</button>
+      <button onclick="scrollToSection('contact')">Contact Us</button>
     </div>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Dream of ATH, founded in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.</p>
+    <p>Dream of ATH, founded by Daniel in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.</p>
   </section>
 
   <section>
@@ -101,72 +101,6 @@
     </div>
     <a href="archives.html" class="see-archives-btn">See Project Archives</a>
 
-  </section>
-
-  <section id="why-choose-us">
-    <h2>Why Choose Us</h2>
-    <div class="why-choose-container">
-      <div class="why-choose-item">
-        <img src="Images/support.jpg" alt="Support Image">
-        <div>
-          <h3>24/7 Moderation and Support</h3>
-          <p>
-            We have over 10 active moderators covering all time zones, ensuring your community is always active, engaged, and protected.
-          </p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community.jpg" alt="Community Image">
-        <div>
-          <h3>Community is Key</h3>
-          <p>
-            A positive community is the backbone of any successful project. Trust us to drive tremendous growth.
-          </p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community-Management-Tools.png" alt="Management Tools">
-        <div>
-          <h3>Trusted Community Management</h3>
-          <p>
-            We are dedicated to helping projects, large or small, thrive in the competitive crypto space.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="why-choose-us">
-    <h2>Why Choose Us</h2>
-    <div class="why-choose-container">
-      <div class="why-choose-item">
-        <img src="Images/support.jpg" alt="Support Image">
-        <div>
-          <h3>24/7 Moderation and Support</h3>
-          <p>
-            We have over 10 active moderators covering all time zones, ensuring your community is always active, engaged, and protected.
-          </p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community.jpg" alt="Community Image">
-        <div>
-          <h3>Community is Key</h3>
-          <p>
-            A positive community is the backbone of any successful project. Trust us to drive tremendous growth.
-          </p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community-Management-Tools.png" alt="Management Tools">
-        <div>
-          <h3>Trusted Community Management</h3>
-          <p>
-            We are dedicated to helping projects, large or small, thrive in the competitive crypto space.
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
   
   <!-- Benefits Section -->
@@ -283,6 +217,18 @@
     });
 
     window.addEventListener('scroll', closeMenu);
+    
+    function toggleMenu() {
+      const header = document.querySelector('header');
+      const hamburger = document.querySelector('.hamburger');
+      header.classList.toggle('menu-expanded');
+      if(header.classList.contains('menu-expanded')) {
+          hamburger.textContent = '✕';
+      } else {
+          hamburger.textContent = '☰';
+      }
+    }
+
   </script>
 </body>
 </html>

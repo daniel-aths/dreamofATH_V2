@@ -1,0 +1,116 @@
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Archive Container for Larger Screens (Grid Layout) */
+.archive-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Project Card Styles (Default Grid Layout) */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s;
+  max-width: 300px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.project-card .details p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Return-to-Home Button */
+.return-home-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #27ae60;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.return-home-btn:hover {
+  background-color: #1e8449;
+}
+
+/* --- Stacked Layout for Small Screens (max-width: 600px) --- */
+@media (max-width: 600px) {
+  /* Change container layout to block so items can overlap */
+  .archive-container {
+    display: block;
+    position: relative;
+  }
+  
+  .project-card {
+    position: relative;
+    max-width: 90%;
+    margin: 1rem auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Overlap cards to simulate a stack */
+  .project-card:not(:first-child) {
+    margin-top: -50px; /* Adjust this value to control overlap amount */
+  }
+  
+  /* When a card is expanded, remove the negative margin to reveal full details */
+  .project-card.expanded {
+    margin-top: 1rem !important;
+    z-index: 10;
+  }
+  
+  /* Hide details (set max-height: 0) when not expanded */
+  .project-card .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  /* When expanded, allow the details to grow */
+  .project-card.expanded .details {
+    max-height: 500px; /* Set a sufficiently high value to show full details */
+  }
+}

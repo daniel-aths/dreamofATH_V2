@@ -442,5 +442,9 @@ width: 100%;
 .benefit-4 { background-color:  rgba(255, 255, 255, 0.432) }
 .benefit-5 { background-color:rgba(255, 255, 255, 0.432); }
 
+.hero div {
+  padding: 1rem;
+}
+
 
 
