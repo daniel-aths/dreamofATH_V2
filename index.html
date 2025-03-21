@@ -1,236 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dream of ATH is a community management service provider driven by the mission to help crypto projects reach their fullest potential.">
-  <meta name="keywords" content="Community Manager, Web3, Portfolio, Crypto">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dream of ATH is a community management service provider driven by the mission to help crypto projects reach their fullest potential." />
+  <meta name="keywords" content="Community Manager, Web3, Portfolio, Crypto" />
   <title>Dream of ATH | Professional Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="Images/Dream of ATH Logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="Images/Dream of ATH Logo.jpg" />
 </head>
 <body>
   <header>
     <div class="header-content">
-      <img src="Images/Dream of ATH Logo.jpg" alt="Dream of ATH Logo">
+      <img src="Images/Logo/logo.png" alt="Dream of ATH Logo" class="logo" />
       <h1 class="site-title">Dream of ATH</h1>
     </div>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <nav id="navMenu">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-      <a href="mailto:contact@dreamofath.pro">Email Us</a>
-      <div class="social-icons">
-        <a href="https://x.com/dreamofATH" target="_blank">
-          <img src="Images/twitter (5).png" alt="X Logo" class="social-icon-img">
-        </a>
-        <a href="https://t.me/dannyd_boy" target="_blank">
-          <img src="Images/telegram (4).png" alt="Telegram Logo" class="social-icon-img">
-        </a>
-      </div>
+
+    <!-- Hamburger shown only on mobile via CSS -->
+    <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="mailto:contact@dreamofath.pro">Contact</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1>Welcome to Dream of All Time High!</h1>
-      <img class="dreams-logo-name" src="Images/Dreams logo name.jpg" alt="Dream of ATH Logo">
-      <p>Explore the endless possibilities with a hard-working and dedicated team, ready to take your project to the next level.</p>
-      <button onclick="scrollToSection('contact')">Contact Us</button>
-    </div>
-  </section>
+  <!-- Use main id=home to let the “Home” link scroll to top -->
+  <main id="home">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="slogan">We Build &amp; Nurture Thriving Communities</h1>
+        <p>We are a <span>team</span> focused on community management and moderation</p>
+        <div class="hero-buttons">
+          <button onclick="scrollToSection('contact')">Hire Us</button>
+          <button onclick="scrollToSection('projects')">View Projects</button>
+        </div>
+        <img src="Images/Banner.jpg" alt="banner-img">
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Dream of ATH, founded by Daniel in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.</p>
-  </section>
+    <!-- GROWTH METRICS -->
+    <section class="metrics">
+      <div class="grow">
+        <img src="Images/community (1).png" alt="Growing Community" />
+        <div>
+          <div class="growth-fig">35</div>
+          <h3>Communities Built</h3>
+        </div>
+      </div>
+      <div class="grow">
+        <img src="Images/social-media.png" alt="Engagement" />
+        <div>
+          <div class="growth-fig">10,000+</div>
+          <h3>Engagements</h3>
+        </div>
+      </div>
+      <div class="grow">
+        <img src="Images/feedback.png" alt="Customer Satisfaction" />
+        <div>
+          <div class="growth-fig">100%</div>
+          <h3>Customer Satisfaction</h3>
+        </div>
+      </div>
+      <div class="grow">
+        <img src="Images/award.png" alt="Experience" />
+        <div>
+          <div class="growth-fig">4 Years</div>
+          <h3>Community Management Experience</h3>
+        </div>
+      </div>
+      <div class="grow">
+        <img src="Images/no-spam.png" alt="Spam Reduction" />
+        <div>
+          <div class="growth-fig">99%</div>
+          <h3>Spam Reduction</h3>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Why Choose Us</h2>
-    <div class="why-choose-container">
-      <div class="why-choose-item">
-        <img src="Images/support.jpg" alt="Support Image">
-        <div>
-          <h3>24/7 Moderation and Support</h3>
-          <p>We currently have over 10 active moderators that cover all time zones, ensuring your community is always active, engaged, and protected against spam while you focus on what matters most.</p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community.jpg" alt="Community Image">
-        <div>
-          <h3>Community is key</h3>
-          <p>Community is the backbone of any successful project. With us, you can be sure of a positive community that will drive tremendous growth for your project.</p>
-        </div>
-      </div>
-      <div class="why-choose-item">
-        <img src="Images/Community-Management-Tools.png" alt="Management Tools">
-        <div>
-          <h3>Trusted Leader in Community Management</h3>
-          <p>Dream of ATH is committed to helping projects, large or small, thrive in the ever-competitive and evolving crypto space.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- ABOUT US -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        Dream of ATH, founded by Daniel and Esther in 2022, is driven by the mission to help crypto projects reach their fullest potential—just as “ATH” symbolizes an all-time high in the market. With a focus on communication, engagement, and trust, the team sets a new standard in community management, empowering Web3 projects to thrive and achieve lasting success.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div id="projectList" class="project-container">
-      <div class="project-card">
-        <img src="Images/your_ai.png" alt="Your AI Project">
-        <div>
-          <h3>Your AI</h3>
-          <p>The new way of e-commerce
-            Revolutionizing e-commerce content 
-            with a Spotify-inspired content streaming model.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img class="klee-img" src="Images/Klee.jpeg" alt="Klee Games Project">
-        <div>
-          <h3>Klee Games</h3>
-          <p>Klee Games is an upcoming all-in-one gaming studio that embraces various low-cost play-to-earn mechanisms to allow users to earn while playing Klee Games and using the Klee Launch Pad. Our mission is build a play-to-earn ecosystem that includes an incubator-style launch pad that combines many methods of providing income to the system's users.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="Images/Narfex.png" alt="Narfex Protocol Project">
-        <div>
-          <h3>Narfex Protocol</h3>
-          <p>Narfex is the world’s first decentralized peer-to-peer (P2P) exchange for fiat to crypto trades, built on top of a smart contract-based protocol. Narfex Protocol enables users to make secure and efficient trades of various digital assets, without the need for centralized intermediaries.</p>
-        </div>
-      </div>
-    </div>
-    <a href="archives.html" class="see-archives-btn">See Project Archives</a>
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>
+        We offer a variety of community management services to help you engage, moderate, and grow your community effectively.
+      </p>
+      <ul>
+        <li>Full-Time Community Moderation</li>
+        <li>Engagement Strategy &amp; Consulting</li>
+        <li>Spam &amp; Security Management</li>
+        <li>24/7 Customer Support</li>
+      </ul>
+    </section>
 
-  </section>
-  
-  <!-- Benefits Section -->
-  <section id="benefits">
-    <h2>What You Can Benefit</h2>
-    <p class="benefits-intro">
-      Choosing Dream of ATH is your gateway to reaching ATH with your project.
-    </p>
-    <div class="benefit-grid">
-      <!-- Top Row: 3 Items -->
-      <div class="top-row">
-        <div class="benefit-item benefit-1">
-          <img src="Images/24-hours-7 benefit.avif" alt="24/7 Support">
-          <h3>Round The Clock Support</h3>
-          <p>24/7 community management and customer service.</p>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="Images/Project-imgs/your_ai.png" alt="Your AI Project" />
+          <div>
+            <h3>Your AI</h3>
+            <p>
+              Revolutionizing e-commerce content with a Spotify-inspired content streaming model.
+            </p>
+          </div>
         </div>
-        <div class="benefit-item benefit-2">
-          <img src="Images/security benefit.png" alt="Security">
-          <h3>Security</h3>
-          <p>Protect your community from scammers and bad actors.</p>
+        <div class="project-card">
+          <img class="klee-img" src="Images/Project-imgs/Klee.jpeg" alt="Klee Games Project" />
+          <div>
+            <h3>Klee Games</h3>
+            <p>
+              An all-in-one gaming studio embracing play-to-earn mechanisms to provide income for users.
+            </p>
+          </div>
         </div>
-        <div class="benefit-item benefit-3">
-          <img src="Images/stressfree benefit.png" alt="Stress-Free Solutions">
-          <h3>Stress-Free Solutions</h3>
-          <p>
-            Handle community and investor interactions so developers can focus on innovation.
-          </p>
-        </div>
-      </div>
-      <!-- Bottom Row: 2 Items -->
-      <div class="bottom-row">
-        <div class="benefit-item benefit-4">
-          <img src="Images/engagement benefit.png" alt="Community Engagement">
-          <h3>Community Engagement</h3>
-          <p>Grow and maintain a positive community.</p>
-        </div>
-        <div class="benefit-item benefit-5">
-          <img src="Images/hype benefit.jpg" alt="Hype Generation">
-          <h3>Hype Generation</h3>
-          <p>
-            Build excitement and buzz around your project to drive adoption.
-          </p>
+        <div class="project-card">
+          <img src="Images/Project-imgs/Narfex.png" alt="Narfex Protocol Project" />
+          <div>
+            <h3>Narfex Protocol</h3>
+            <p>
+              The world’s first decentralized peer-to-peer (P2P) exchange for secure fiat to crypto trades.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <a href="archives.html" class="see-archives-btn">See Project Archives</a>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mjkgrjgw" method="POST">
-      <label for="name">Project Name</label>
-      <input id="name" type="text" name="name" placeholder="Your Project Name" required>
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" placeholder="Your Email" required>
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-      <div class="form-buttons">
-        <button type="submit">Submit Form</button>
-        <a href="https://calendly.com/danielsweb3" target="_blank"><button type="button">Book a Meeting</button></a>
+    <!-- REVIEWS SECTION -->
+    <section id="reviews">
+      <h2>Reviews</h2>
+      <!-- Container where reviews will be displayed -->
+      <div id="reviewsContainer" class="reviews-container"></div>
+
+      <!-- SEE MORE + WRITE REVIEW Buttons -->
+      <div class="reviews-buttons">
+        <button id="seeMoreBtn">See More</button>
+        <button id="writeReviewBtn">Write a Review</button>
       </div>
-      <p id="successMessage"></p>
-    </form>
-  </section>
-  <section id="job-application">
-    <h2>Join Us as a Moderator</h2>
-    <p>We are looking for dedicated and enthusiastic individuals to join our team of moderators. If you are passionate about community management and love helping people, this is the perfect opportunity for you.</p>
-    <p><a href="https://forms.gle/VHEfZKxpKTYgnZer8" target="_blank">Click here to apply now</a>.</p>
-  </section>
+
+      <!-- Hidden form container (toggle via JS) -->
+      <div id="reviewFormContainer" class="hidden-review-form">
+        <form id="reviewForm">
+          <h3>Submit Your Review</h3>
+
+          <label for="reviewerName">Name</label>
+          <input type="text" id="reviewerName" name="reviewerName" required>
+
+          <label for="reviewerRole">Role</label>
+          <select id="reviewerRole" name="reviewerRole">
+            <option value="team">Team</option>
+            <option value="community">Community</option>
+          </select>
+
+          <label for="reviewRating">Rating</label>
+          <div class="star-rating">
+            <!-- 5 star radio inputs (highest to lowest) -->
+            <input type="radio" name="reviewRating" value="5" id="star5">
+            <label for="star5">⭐</label>
+            <input type="radio" name="reviewRating" value="4" id="star4">
+            <label for="star4">⭐</label>
+            <input type="radio" name="reviewRating" value="3" id="star3">
+            <label for="star3">⭐</label>
+            <input type="radio" name="reviewRating" value="2" id="star2">
+            <label for="star2">⭐</label>
+            <input type="radio" name="reviewRating" value="1" id="star1">
+            <label for="star1">⭐</label>
+          </div>
+
+          <label for="reviewText">Review</label>
+          <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
+
+          <button type="submit">Submit Review</button>
+        </form>
+        <p id="reviewMessage"></p>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (Second to last) -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Do you offer 24/7 moderation and support?</h3>
+            <button class="faq-toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, we have over 10 active moderators covering all time zones, ensuring your community is always protected.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Why is community key?</h3>
+            <button class="faq-toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>A positive and engaged community is the backbone of any successful project, driving growth and innovation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Are you a trusted leader in community management?</h3>
+            <button class="faq-toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Dream of ATH is committed to helping projects of all sizes thrive in the competitive crypto space.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How do you ensure security?</h3>
+            <button class="faq-toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We protect your community from scammers and malicious actors, implementing spam reduction measures and vigilant moderation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What about hype generation?</h3>
+            <button class="faq-toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We build excitement and buzz around your project, driving adoption and positive momentum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (Last Section) -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="https://formspree.io/f/mjkgrjgw" method="POST">
+        <label for="name">Project Name</label>
+        <input id="name" type="text" name="name" placeholder="Your Project Name" required />
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Your Email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        <div class="form-buttons">
+          <button type="submit">Submit Form</button>
+          <a href="https://calendly.com/danielsweb3" target="_blank">
+            <button type="button">Book a Meeting</button>
+          </a>
+        </div>
+        <p id="successMessage"></p>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; Dream of ATH 2025</p>
     <div class="social-icons bottom-socials">
       <a href="https://x.com/dreamofATH" target="_blank">
-        <img src="Images/twitter (5).png" alt="X Logo" class="social-icon-img">
+        <img src="Images/twitter (6).png" alt="X Logo" class="social-icon-img" />
       </a>
       <a href="https://t.me/dannyd_boy" target="_blank">
-        <img src="Images/telegram (4).png" alt="Telegram Logo" class="social-icon-img">
+        <img src="Images/telegram (6).png" alt="Telegram Logo" class="social-icon-img" />
+      </a>
+      <a href="https://discord.com/users/973138776513732609" target="_blank">
+        <img src="Images/discord (1).png" alt="Discord Logo" class="social-icon-img" />
       </a>
     </div>
+    <p>&copy; 2025 Dream of ATH</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.querySelector('header').classList.toggle('menu-expanded');
-    }
-
-    function closeMenu() {
-      document.querySelector('header').classList.remove('menu-expanded');
-    }
-
-    function scrollToSection(sectionId) {
-      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      fetch(this.action, {
-        method: this.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          document.getElementById('successMessage').textContent = 'Message sent successfully!';
-          this.reset();
-        } else {
-          document.getElementById('successMessage').textContent = 'Failed to send message. Please try again.';
-        }
-      }).catch(error => {
-        document.getElementById('successMessage').textContent = 'Failed to send message. Please try again.';
-      });
-    });
-
-    window.addEventListener('scroll', closeMenu);
-    
-    function toggleMenu() {
-      const header = document.querySelector('header');
-      const hamburger = document.querySelector('.hamburger');
-      header.classList.toggle('menu-expanded');
-      if(header.classList.contains('menu-expanded')) {
-          hamburger.textContent = '✕';
-      } else {
-          hamburger.textContent = '☰';
-      }
-    }
-
-  </script>
+  <!-- Your main JavaScript file -->
+  <script src="app.js"></script>
 </body>
 </html>

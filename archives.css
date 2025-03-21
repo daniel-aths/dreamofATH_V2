@@ -14,9 +14,11 @@ body {
   padding: 2rem;
 }
 
-h1 {
+.the-archives {
   font-size: 2.5rem;
+  margin-top: 5rem;
   margin-bottom: 1.5rem;
+  color: #7D9ECC;
 }
 
 /* Archive Container for Larger Screens (Grid Layout) */
