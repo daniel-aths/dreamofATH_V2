@@ -68,6 +68,11 @@ header {
   font-size: 2rem;
 }
 
+.hamburger:hover {
+  background-color: var(--highlight-color);
+  color:var(--white);
+}
+
 /* Navigation */
 nav {
   display: flex;
