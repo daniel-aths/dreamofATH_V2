@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.scrollToSection = scrollToSection;
   window.closeMenu = closeMenu;
 
-
+/*
   // =============== REVIEWS LOGIC ===============
   const reviewsContainer = document.getElementById('reviewsContainer');
   const writeReviewBtn = document.getElementById('writeReviewBtn');
@@ -199,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = chunkSize;
     renderReviews();
   });
+  */
 
 
   // =============== FAQ COLLAPSIBLE LOGIC ===============

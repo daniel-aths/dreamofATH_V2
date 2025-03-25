@@ -9,7 +9,7 @@
   --accent-bg: #e9ecef;
   --nav-bg: #343a40;
   --nav-text: #ffffff;
-  --highlight-color: #ffc107; /* Golden color */
+  --highlight-color: #ffc107; 
 }
 
 /* Global Reset */
@@ -151,7 +151,7 @@ nav a:hover {
   position: relative;
   z-index: 2;
   color: var(--text-color);
-  padding-right: 45%;
+  padding-right: 50%;
 }
 
 .hero-content img {
@@ -181,13 +181,12 @@ nav a:hover {
   color: var(--highlight-color);
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+a {
+  text-decoration: none;
 }
 
 /* Global Button Style */
-button {
+button, .reviewForm {
   padding: 0.6rem 1.2rem;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
@@ -195,7 +194,7 @@ button {
   color: var(--primary-color);
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
@@ -204,7 +203,7 @@ button:hover {
 }
 
 /* Sections */
-main section {
+section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 6rem auto 2rem;
@@ -218,6 +217,7 @@ h2 {
 
 p {
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 /* Metrics */
@@ -288,22 +288,47 @@ p {
   flex: 1;
 }
 
-/* See Archives Button */
-.see-archives-btn {
-  display: inline-block;
-  background: #333;
-  color: var(--white);
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-decoration: none;
+#about {
+  background: var(--white);
   border-radius: 8px;
-  transition: background 0.3s;
-  margin: 1rem auto;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-.see-archives-btn:hover {
-  background: #555;
+.service label {
+  text-transform: uppercase;
 }
+
+.service, .approach {
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.2rem;
+}
+
+.service:hover, .approach:hover {
+  box-shadow: 2px 2px 10px var(--highlight-color);
+}
+
+.service input, .approach input {
+  display: none;
+}
+
+.service label, .approach label {
+  cursor: pointer;
+}
+
+.service-content, .approach-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #444;
+}
+
+input:checked + label + .service-content, input:checked + label + .approach-content {
+  max-height: 40rem;
+  padding: 0.3rem 0;
+} 
 
 /* Contact Form */
 form {
