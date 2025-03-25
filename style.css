@@ -297,10 +297,6 @@ p {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-.service label {
-  text-transform: uppercase;
-}
-
 .service, .approach {
   background: var(--white);
   padding: 2rem 1rem;
