@@ -102,35 +102,47 @@
       <h2>Our Services</h2>
       <ol class="service">
         <input type="checkbox" name="service" id="check1">
-        <label for="check1">Community Growth & Engagement</label>
+        <label for="check1">
+          Community Growth & Engagement
+          <span>&#9658;</span>
+        </label>
           <p class="service-content">We don’t just grow numbers — we grow culture.</p>
       </ol>
       <ol class="service">
         <input type="checkbox" name="service" id="check2">
-        <label for="check2">Content & Social Media Engine
+        <label for="check2">
+          Content & Social Media Engine
+          <span>&#9658;</span>
         </label>
-        <p class="service-content">From tweets to threads, we craft consistent stories that stick.</p>
+          <p class="service-content">From tweets to threads, we craft consistent stories that stick.</p>
       </ol>
       <ol class="service">
         <input type="checkbox" name="service" id="check3">
-        <label for="check3">Go-to-Market Strategy
+        <label for="check3">
+          Go-to-Market Strategy
+          <span>&#9658;</span>
         </label>
         <p class="service-content">Launch planning that connects with real people, not just charts.
         </p>
       </ol>
       <ol class="service">
         <input type="checkbox" name="service" id="check4">
-        <label for="check4">Event Management</label>
+        <label for="check4">Event Management
+          <span>&#9658;</span>
+        </label>
         <p class="service-content">With AMAs, Quizzes, Thread competitons and other engaging events, we keep your community energized</p>
       </ol>
       <ol class="service">
         <input type="checkbox" name="service" id="check5">
-        <label for="check5">Branding & Storytelling</label>
+        <label for="check5">Branding & Storytelling
+          <span>&#9658;</span>
+        </label>
         <p class="service-content">Build a voice people remember and a vibe they trust.</p>
       </ol>
       <ol class="service">
         <input type="checkbox" name="service" id="check6">
         <label for="check6">Public Relations
+          <span>&#9658;</span>
         </label>
         <p class="service-content">Media outreach and reputation support that moves with intention.</p>
       </ol>
@@ -143,6 +155,7 @@
       <ol class="approach">
         <input type="checkbox" name="approach" id="check7">
         <label for="check7">We are your Community Growth Partners
+          <span>&#9658;</span>
         </label>
         <div class="approach-content">
           <p>
@@ -159,7 +172,9 @@
       </ol>
       <ol class="approach">
         <input type="checkbox" name="approach" id="check8">
-        <label for="check8">Our Unique Know-How</label>
+        <label for="check8">Our Unique Know-How
+          <span>&#9658;</span>
+        </label>
         <div class="approach-content">
           <p>
             We don’t do hype. We build real communities that stick.
@@ -174,7 +189,9 @@
       </ol>
       <ol class="approach">
         <input type="checkbox" name="approach" id="check9">
-        <label for="check9">Our Mission</label>
+        <label for="check9">Our Mission
+          <span>&#9658;</span>
+        </label>
         <div class="approach-content">
           <p>
             •	Save You Time
@@ -236,49 +253,13 @@
     <!-- REVIEWS SECTION -->
     <section id="reviews">
       <h2>Reviews</h2>
+      <p><i> Be the first to write a review!</i></p>
+
       <div id="reviewsContainer" class="reviews-container"></div>
 
-      <!-- SEE MORE + WRITE REVIEW Buttons -->
-      <div class="reviews-buttons">
-        <button id="seeMoreBtn">See More</button>
+      <div class="reviews-buttons">       
         <a class="reviewForm" href="https://tally.so/r/nPr9Y0">Write a Review</a>
       </div>
-
-      <!-- Hidden form container (toggle via JS) -->
-      <div id="reviewFormContainer" class="hidden-review-form">
-        <form id="reviewForm">
-          <h3>Submit Your Review</h3>
-
-          <label for="reviewerName">Name</label>
-          <input type="text" id="reviewerName" name="reviewerName" required>
-
-          <label for="reviewerRole">Role</label>
-          <select id="reviewerRole" name="reviewerRole">
-            <option value="team">Team</option>
-            <option value="community">Community</option>
-          </select>
-
-          <label for="reviewRating">Rating</label>
-          <div class="star-rating">
-          
-            <input type="radio" name="reviewRating" value="5" id="star5">
-            <label for="star5">⭐</label>
-            <input type="radio" name="reviewRating" value="4" id="star4">
-            <label for="star4">⭐</label>
-            <input type="radio" name="reviewRating" value="3" id="star3">
-            <label for="star3">⭐</label>
-            <input type="radio" name="reviewRating" value="2" id="star2">
-            <label for="star2">⭐</label>
-            <input type="radio" name="reviewRating" value="1" id="star1">
-            <label for="star1">⭐</label>
-          </div>
-
-          <label for="reviewText">Review</label>
-          <textarea id="reviewText" name="reviewText" rows="4" required></textarea>
-
-          <button type="submit">Submit Review</button>
-        </form>
-        <p id="reviewMessage"></p>
       </div>
     </section>
 
