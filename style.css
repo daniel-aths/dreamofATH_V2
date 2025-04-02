@@ -1,26 +1,28 @@
 /* CSS Variables */
 :root {
-  --primary-color: #7D9ECC;
-  --hover-color: #6E8FC0;
-  --background-color: #FAFAFA;
+  --primary-color: #7d9ecc;
+  --hover-color: #6e8fc0;
+  --background-color: #fafafa;
   --header-bg: rgba(255, 255, 255, 0.95);
   --text-color: #212529;
   --white: #ffffff;
   --accent-bg: #e9ecef;
   --nav-bg: #343a40;
   --nav-text: #ffffff;
-  --highlight-color: #ffc107; 
+  --highlight-color: #ffc107;
 }
 
 /* Global Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -39,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -70,7 +72,7 @@ header {
 
 .hamburger:hover {
   background-color: var(--highlight-color);
-  color:var(--white);
+  color: var(--white);
 }
 
 /* Navigation */
@@ -186,7 +188,8 @@ a {
 }
 
 /* Global Button Style */
-button, .reviewForm {
+button,
+.reviewForm {
   padding: 0.6rem 1.2rem;
   border: 2px solid var(--primary-color);
   border-radius: 6px;
@@ -269,7 +272,8 @@ p {
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid #ddd;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.15), -5px -5px 10px rgba(255,255,255,0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15),
+    -5px -5px 10px rgba(255, 255, 255, 0.5);
   transition: transform 0.3s;
 }
 
@@ -294,26 +298,30 @@ p {
   background: var(--white);
   border-radius: 1.2rem;
   padding: 1.5rem;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service, .approach {
+.service,
+.approach {
   background: var(--white);
   padding: 2rem 1rem;
   margin-bottom: 1.5rem;
   border-radius: 1.2rem;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.service:hover, .approach:hover {
+.service:hover,
+.approach:hover {
   box-shadow: 2px 2px 10px var(--highlight-color);
 }
 
-.service input, .approach input {
+.service input,
+.approach input {
   display: none;
 }
 
-.service label, .approach label {
+.service label,
+.approach label {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -321,24 +329,27 @@ p {
   transition: transform 0.5s ease;
 }
 
-.service label:hover, .approach label:hover {
+.service label:hover,
+.approach label:hover {
   span {
     transform: rotate(90deg);
     color: var(--highlight-color);
   }
 }
 
-.service-content, .approach-content {
+.service-content,
+.approach-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
   color: #444;
 }
 
-input:checked + label + .service-content, input:checked + label + .approach-content {
+input:checked + label + .service-content,
+input:checked + label + .approach-content {
   max-height: 40rem;
   padding: 0.3rem 0;
-} 
+}
 
 /* Contact Form */
 form {
@@ -373,89 +384,57 @@ label {
 }
 
 /* REVIEWS SECTION */
-.reviews-container {
+.reviews {
+  list-style-type: none;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews:active, .reviews:hover {
+  box-shadow: 2px 2px 10px var(--highlight-color);
+  cursor: pointer;
+}
+
+.reviews li {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+
 }
 
-/* Each review card */
-.review-card {
-  background: var(--white);
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-}
-
-/* Top part: name/role on the left, rating on the right */
-.review-header {
+.reviews li > div {
+  position: relative;
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
 }
 
-.review-name {
-  font-weight: 600;
-  color: var(--primary-color);
+.li-profile {
+  width: 7rem;
 }
 
-.review-role {
-  margin-left: 1rem;
-  font-style: italic;
-  color: #666;
+.li-logo {
+  clip-path: circle(40% at 50% 51%);
+  width: 3rem;
+  position: absolute;
+  bottom: -5px;
+  left: 60px;
 }
 
-.review-rating {
-  color: var(--highlight-color);
-  font-size: 1.2rem;
-}
-
-/* Buttons for "See More" and "Write a Review" */
-.reviews-buttons {
+.li-text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
 }
 
-/* Hidden form container */
-.hidden-review-form {
-  display: none; /* Hidden by default, toggled with JS */
-  background: var(--white);
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  padding: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
+.dev-name {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-left: 30px;
+  margin-bottom: 0;
 }
 
-/* Star Rating Layout */
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse; /* Highest star on the left visually */
-  justify-content: flex-start;
-  gap: 0.2rem;
-  margin-bottom: 1rem;
-}
-
-.star-rating input {
-  display: none;
-}
-
-.star-rating label {
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: var(--highlight-color);
-}
-
-/* For message after submission */
-#reviewMessage {
-  color: green;
-  margin-top: 1rem;
+.project-name {
+  margin-left: 30px;
 }
 
 /* FAQ SECTION */
@@ -470,7 +449,7 @@ label {
   background: var(--white);
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -511,8 +490,12 @@ label {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Footer */
@@ -551,7 +534,7 @@ footer div {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .hero-bg {
     clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%, 30% 50%, 30% 80%);
   }
@@ -563,7 +546,7 @@ footer div {
   .hero-content img {
     max-width: 100%;
     position: absolute;
-    top:-16rem;
+    top: -16rem;
     right: 0;
     height: auto;
     align-items: center;
