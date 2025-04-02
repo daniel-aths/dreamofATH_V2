@@ -228,6 +228,7 @@ p {
 .metrics {
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
 }
 
 .scroll-track {
@@ -255,7 +256,11 @@ p {
   }
 }
 
-.metrics:hover .scroll-track {
+.metrics:hover {
+    cursor: pointer;
+}
+
+.metrics:active .scroll-track {
   animation-play-state: paused;
   cursor: pointer;
 }
