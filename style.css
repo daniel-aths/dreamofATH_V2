@@ -229,6 +229,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
+  width: 100%;
 }
 
 .scroll-track {
@@ -241,7 +242,7 @@ p {
 
 .grow {
   display: inline-block;
-  margin-right: 1rem;
+  margin-right: 3rem;
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
